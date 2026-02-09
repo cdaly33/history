@@ -1,0 +1,20 @@
+{
+  "name": "roman-history-timeline",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "shared",
+    "tests"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "validate-data": "npm run validate --workspace=shared",
+    "test:e2e": "npm run test --workspace=tests",
+    "test:unit": "npm run test --workspace=client"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

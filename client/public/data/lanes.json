@@ -1,0 +1,26 @@
+[
+  {
+    "id": "military",
+    "label": "Military",
+    "color": "#8B0000",
+    "order": 1
+  },
+  {
+    "id": "politics",
+    "label": "Politics & Governance",
+    "color": "#4B0082",
+    "order": 2
+  },
+  {
+    "id": "emperors",
+    "label": "Emperors & Reigns",
+    "color": "#DAA520",
+    "order": 3
+  },
+  {
+    "id": "culture-religion",
+    "label": "Culture & Religion",
+    "color": "#2F4F4F",
+    "order": 4
+  }
+]

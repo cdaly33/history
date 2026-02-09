@@ -1,0 +1,50 @@
+[
+  {
+    "id": "roman-republic",
+    "label": "Roman Republic",
+    "start": { "year": -508, "precision": "year", "approximate": true },
+    "end": { "year": -26, "precision": "year", "approximate": false },
+    "color": "#CD853F",
+    "order": 1
+  },
+  {
+    "id": "principate",
+    "label": "Principate",
+    "start": { "year": -26, "precision": "year", "approximate": false },
+    "end": { "year": 235, "precision": "year", "approximate": false },
+    "color": "#B8860B",
+    "order": 2
+  },
+  {
+    "id": "crisis-third-century",
+    "label": "Crisis of the Third Century",
+    "start": { "year": 235, "precision": "year", "approximate": false },
+    "end": { "year": 284, "precision": "year", "approximate": false },
+    "color": "#8B4513",
+    "order": 3
+  },
+  {
+    "id": "dominate",
+    "label": "Dominate",
+    "start": { "year": 284, "precision": "year", "approximate": false },
+    "end": { "year": 395, "precision": "year", "approximate": false },
+    "color": "#A0522D",
+    "order": 4
+  },
+  {
+    "id": "western-empire",
+    "label": "Western Roman Empire",
+    "start": { "year": 395, "precision": "year", "approximate": false },
+    "end": { "year": 476, "precision": "year", "approximate": false },
+    "color": "#D2691E",
+    "order": 5
+  },
+  {
+    "id": "eastern-byzantine",
+    "label": "Eastern Roman Empire / Byzantine",
+    "start": { "year": 395, "precision": "year", "approximate": false },
+    "end": { "year": 1453, "precision": "year", "approximate": false },
+    "color": "#8B7355",
+    "order": 6
+  }
+]

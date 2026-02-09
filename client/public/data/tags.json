@@ -1,0 +1,42 @@
+[
+  {
+    "id": "war",
+    "label": "War",
+    "category": "conflict-type"
+  },
+  {
+    "id": "battle",
+    "label": "Battle",
+    "category": "conflict-type"
+  },
+  {
+    "id": "legislation",
+    "label": "Legislation",
+    "category": "political"
+  },
+  {
+    "id": "assassination",
+    "label": "Assassination",
+    "category": "political"
+  },
+  {
+    "id": "natural-disaster",
+    "label": "Natural Disaster",
+    "category": "event-type"
+  },
+  {
+    "id": "religious-policy",
+    "label": "Religious Policy",
+    "category": "religion"
+  },
+  {
+    "id": "imperial-succession",
+    "label": "Imperial Succession",
+    "category": "political"
+  },
+  {
+    "id": "territorial-expansion",
+    "label": "Territorial Expansion",
+    "category": "military"
+  }
+]

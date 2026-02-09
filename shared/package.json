@@ -1,0 +1,13 @@
+{
+  "name": "@roman-history/shared",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./types.ts",
+  "scripts": {
+    "validate": "tsx validate.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "zod": "^3.22.4"
+  }
+}

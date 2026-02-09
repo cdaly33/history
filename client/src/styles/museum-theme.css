@@ -1,0 +1,301 @@
+/* Museum Theme Styles */
+
+/* Color Palette */
+:root {
+  --bronze: #8B4513;
+  --dark-bronze: #654321;
+  --gold: #D4AF37;
+  --parchment: #f5f1e8;
+  --parchment-light: #faf8f3;
+  --charcoal: #2c2c2c;
+  --stone-gray: #4a4a4a;
+}
+
+/* Typography Enhancements */
+.event-card-title,
+.event-detail h2,
+.event-detail h3 {
+  color: var(--bronze);
+}
+
+.event-card-date,
+.event-detail-date {
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+  color: var(--stone-gray);
+  font-weight: 500;
+}
+
+/* Event Cards */
+.event-list {
+  margin: 0;
+}
+
+.event-list h2 {
+  color: var(--bronze);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5rem;
+}
+
+.event-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-card {
+  background: #fff;
+  border: 1px solid #e0d5c7;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+  transform: translateY(-2px);
+}
+
+.event-card.active {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+}
+
+.event-card-color-bar {
+  height: 4px;
+  width: 100%;
+}
+
+.event-card-content {
+  padding: 1rem;
+}
+
+.event-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.event-card-date {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-card-summary {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.event-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Tags & Chips */
+.tag-chip,
+.person-chip,
+.place-chip {
+  display: inline-block;
+  background: var(--parchment);
+  color: var(--charcoal);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid #d4c5a9;
+}
+
+.person-chip {
+  background: #e8f4f8;
+  border-color: #b8d4e0;
+}
+
+.place-chip {
+  background: #f0e8f8;
+  border-color: #d4c5e0;
+}
+
+/* Event Detail */
+.event-detail {
+  max-width: 900px;
+}
+
+.event-detail-header {
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.event-detail-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-detail-date {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.event-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.event-detail-narrative {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.event-detail-narrative p {
+  margin-bottom: 1rem;
+}
+
+.event-detail-people,
+.event-detail-places,
+.event-detail-images,
+.event-detail-sources {
+  margin-bottom: 2rem;
+}
+
+.event-detail h3 {
+  font-size: 1.4rem;
+  color: var(--bronze);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e0d5c7;
+  padding-bottom: 0.5rem;
+}
+
+.people-chips,
+.places-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.image-item {
+  border: 1px solid #e0d5c7;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-placeholder {
+  padding: 3rem 1rem;
+  background: #f5f5f5;
+  text-align: center;
+  color: #666;
+}
+
+.image-attribution {
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: var(--parchment-light);
+}
+
+.image-caption {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--charcoal);
+}
+
+.image-credit {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.license-unknown {
+  color: #b8860b;
+  font-weight: 600;
+}
+
+.image-source {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Sources List */
+.sources-list {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.source-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--parchment-light);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+}
+
+.source-content {
+  margin-bottom: 0.5rem;
+}
+
+.source-author {
+  font-weight: 600;
+}
+
+.source-title {
+  font-weight: 500;
+  color: var(--bronze);
+}
+
+.source-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.source-badge.suggested {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+}
+
+.source-link a {
+  color: var(--bronze);
+  font-size: 0.9rem;
+}
+
+.source-notes {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.no-sources {
+  color: #999;
+  font-style: italic;
+}
+
+/* Empty State */
+.event-list-empty {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}

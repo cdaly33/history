@@ -1,0 +1,58 @@
+[
+  {
+    "id": "julius-caesar",
+    "name": "Gaius Julius Caesar",
+    "born": { "year": -99, "precision": "year", "approximate": false },
+    "died": { "year": -43, "month": 3, "day": 15, "precision": "exact", "approximate": false },
+    "title": "Dictator",
+    "shortBio": "Roman general and statesman who played a critical role in the transformation of the Roman Republic into the Roman Empire."
+  },
+  {
+    "id": "augustus",
+    "name": "Augustus (Octavian)",
+    "born": { "year": -62, "precision": "year", "approximate": false },
+    "died": { "year": 14, "precision": "year", "approximate": false },
+    "title": "Emperor",
+    "shortBio": "First Roman Emperor, founder of the Principate, adopted son of Julius Caesar."
+  },
+  {
+    "id": "trajan",
+    "name": "Trajan",
+    "born": { "year": 53, "precision": "year", "approximate": false },
+    "died": { "year": 117, "precision": "year", "approximate": false },
+    "title": "Emperor",
+    "shortBio": "Roman Emperor from 98 to 117 CE, known for expanding the empire to its greatest territorial extent."
+  },
+  {
+    "id": "caracalla",
+    "name": "Caracalla",
+    "born": { "year": 188, "precision": "year", "approximate": false },
+    "died": { "year": 217, "precision": "year", "approximate": false },
+    "title": "Emperor",
+    "shortBio": "Roman Emperor who issued the Edict of Caracalla, granting citizenship to all free inhabitants of the empire."
+  },
+  {
+    "id": "constantine",
+    "name": "Constantine I",
+    "born": { "year": 272, "precision": "year", "approximate": true },
+    "died": { "year": 337, "precision": "year", "approximate": false },
+    "title": "Emperor",
+    "shortBio": "First Christian Roman Emperor, founder of Constantinople."
+  },
+  {
+    "id": "romulus-augustulus",
+    "name": "Romulus Augustulus",
+    "born": { "year": 460, "precision": "year", "approximate": true },
+    "died": { "year": 507, "precision": "year", "approximate": true },
+    "title": "Emperor (West)",
+    "shortBio": "Last Western Roman Emperor, deposed in 476 CE."
+  },
+  {
+    "id": "constantine-xi",
+    "name": "Constantine XI Palaiologos",
+    "born": { "year": 1405, "precision": "year", "approximate": false },
+    "died": { "year": 1453, "month": 5, "day": 29, "precision": "exact", "approximate": false },
+    "title": "Emperor (East)",
+    "shortBio": "Last Byzantine Emperor, died defending Constantinople against the Ottoman siege."
+  }
+]

@@ -1,0 +1,144 @@
+/* Timeline Styles */
+
+.timeline-viewport-container {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+}
+
+.timeline-svg {
+  display: block;
+  width: 100%;
+  background: linear-gradient(to bottom, #fafafa 0%, #fff 100%);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+/* Zoom Controls */
+.zoom-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f5f1e8;
+  border-radius: 8px;
+  border: 1px solid #d4c5a9;
+}
+
+.zoom-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zoom-buttons button {
+  background: #8B4513;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.zoom-buttons button:hover {
+  background: #A0522D;
+}
+
+.zoom-level {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 80px;
+  text-align: center;
+}
+
+.year-input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.year-input {
+  width: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.era-toggle {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.go-button {
+  background: #8B4513;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.go-button:hover {
+  background: #A0522D;
+}
+
+/* Timeline Elements */
+.timeline-axis text {
+  font-size: 12px;
+  fill: #333;
+  user-select: none;
+}
+
+.era-band {
+  pointer-events: none;
+}
+
+.lane-row text {
+  user-select: none;
+}
+
+.event-marker {
+  transition: r 0.2s, stroke-width 0.2s;
+}
+
+.event-marker:hover {
+  filter: brightness(1.1);
+}
+
+.event-marker:focus {
+  outline: none;
+  stroke: #000;
+  stroke-width: 3;
+}
+
+.event-range {
+  transition: stroke-width 0.2s, opacity 0.2s;
+}
+
+.event-range:hover {
+  opacity: 1 !important;
+}
+
+.event-range:focus {
+  outline: none;
+}
+
+.event-range rect {
+  transition: stroke-width 0.2s;
+}
+
+.event-range:focus rect {
+  stroke: #000;
+  stroke-width: 3;
+}

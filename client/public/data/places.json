@@ -1,0 +1,44 @@
+[
+  {
+    "id": "rome",
+    "name": "Rome",
+    "modernName": "Rome, Italy",
+    "latitude": 41.9028,
+    "longitude": 12.4964
+  },
+  {
+    "id": "rubicon",
+    "name": "Rubicon River",
+    "modernName": "Rubicone, Italy",
+    "latitude": 44.0833,
+    "longitude": 12.3167
+  },
+  {
+    "id": "carthage",
+    "name": "Carthage",
+    "modernName": "Tunis, Tunisia",
+    "latitude": 36.8528,
+    "longitude": 10.3233
+  },
+  {
+    "id": "pompeii",
+    "name": "Pompeii",
+    "modernName": "Pompeii, Italy",
+    "latitude": 40.7463,
+    "longitude": 14.4989
+  },
+  {
+    "id": "milan",
+    "name": "Milan (Mediolanum)",
+    "modernName": "Milan, Italy",
+    "latitude": 45.4642,
+    "longitude": 9.1900
+  },
+  {
+    "id": "constantinople",
+    "name": "Constantinople",
+    "modernName": "Istanbul, Turkey",
+    "latitude": 41.0082,
+    "longitude": 28.9784
+  }
+]

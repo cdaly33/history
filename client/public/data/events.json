@@ -1,0 +1,421 @@
+[
+  {
+    "id": "founding-of-republic",
+    "type": "point",
+    "title": "Founding of the Roman Republic",
+    "date": {
+      "year": -508,
+      "precision": "year",
+      "approximate": true,
+      "calendarNote": "traditional date"
+    },
+    "summary": "The overthrow of the last Roman king and establishment of the Republic, traditionally dated to 509 BCE.",
+    "narrative": "According to Roman tradition, the Republic was founded in 509 BCE after the overthrow of Lucius Tarquinius Superbus, the last king of Rome. The immediate cause was said to be the rape of Lucretia by the king's son, which led to a revolt led by Lucius Junius Brutus. The monarchy was replaced with a system of elected magistrates and a Senate, establishing the republican form of government that would last for nearly five centuries.\n\nThe early Republic was characterized by a struggle between patricians (aristocrats) and plebeians (commoners) for political rights, the gradual expansion of citizenship, and increasing territorial control over the Italian peninsula.",
+    "categoryId": "politics",
+    "tags": ["legislation"],
+    "people": [],
+    "places": [{ "placeId": "rome", "context": "capital" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "livy-ab-urbe",
+        "type": "ancient-primary",
+        "author": "Livy",
+        "title": "Ab Urbe Condita (History of Rome)",
+        "publication": "Book 1-2",
+        "year": -27,
+        "verified": false,
+        "notes": "Primary ancient source, but written centuries after the events"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "first-punic-war",
+    "type": "range",
+    "title": "First Punic War",
+    "date": {
+      "year": -263,
+      "precision": "year",
+      "approximate": false
+    },
+    "endDate": {
+      "year": -240,
+      "precision": "year",
+      "approximate": false
+    },
+    "summary": "The first major conflict between Rome and Carthage for control of Sicily, ending with Roman victory.",
+    "narrative": "The First Punic War (264-241 BCE) was the first of three wars fought between Rome and Carthage, two powerful Mediterranean powers of the ancient world. The conflict began over control of Sicily, particularly the city of Messana.\n\nWhile Carthage was a major naval power with a strong maritime tradition, Rome had to build a fleet from scratch. Despite this initial disadvantage, Rome eventually developed innovative naval tactics, including the corvus (boarding bridge), which allowed them to turn naval battles into infantry engagements where they excelled.\n\nThe war ended with a Roman victory and the Treaty of Lutatius, which forced Carthage to evacuate Sicily and pay substantial reparations. This marked Rome's first major overseas expansion and the beginning of its transformation into a Mediterranean empire.",
+    "categoryId": "military",
+    "tags": ["war", "territorial-expansion"],
+    "people": [],
+    "places": [{ "placeId": "carthage", "context": "enemy territory" }],
+    "images": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/First_Punic_War_264_BC_v2.png/800px-First_Punic_War_264_BC_v2.png",
+        "caption": "Map showing the territories at the start of the First Punic War",
+        "attribution": "Wikimedia Commons user Gringer",
+        "license": "Public Domain",
+        "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:First_Punic_War_264_BC_v2.png"
+      }
+    ],
+    "sources": [
+      {
+        "id": "polybius-histories",
+        "type": "ancient-primary",
+        "author": "Polybius",
+        "title": "The Histories",
+        "publication": "Books 1-2",
+        "year": -140,
+        "verified": false,
+        "notes": "Most detailed ancient account of the Punic Wars"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "crossing-the-rubicon",
+    "type": "point",
+    "title": "Caesar Crosses the Rubicon",
+    "date": {
+      "year": -48,
+      "month": 1,
+      "day": 10,
+      "precision": "exact",
+      "approximate": false
+    },
+    "summary": "Julius Caesar's fateful decision to cross the Rubicon River with his army, sparking civil war.",
+    "narrative": "On January 10, 49 BCE, Julius Caesar made one of history's most consequential decisions when he crossed the Rubicon River with his legion. By Roman law, no general was permitted to lead an army south of the Rubicon into Italy proper, as doing so was considered an act of treason and declaration of war against the Senate and people of Rome.\n\nCaesar had been ordered by the Senate to disband his army and return to Rome to face prosecution. Instead, he famously declared \"alea iacta est\" (the die is cast) and crossed the river, initiating a civil war against Pompey the Great and the optimates faction of the Senate.\n\nThis action marked a point of no return in the collapse of the Roman Republic and ultimately led to Caesar's dictatorship and the end of republican government.",
+    "categoryId": "military",
+    "tags": ["battle", "imperial-succession"],
+    "people": [{ "personId": "julius-caesar", "role": "commander" }],
+    "places": [{ "placeId": "rubicon", "context": "crossing point" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "suetonius-caesar",
+        "type": "ancient-primary",
+        "author": "Suetonius",
+        "title": "The Twelve Caesars - Julius Caesar",
+        "year": 121,
+        "verified": false,
+        "notes": "Written over 150 years after the event"
+      }
+    ],
+    "relatedEventIds": ["assassination-of-caesar"]
+  },
+  {
+    "id": "assassination-of-caesar",
+    "type": "point",
+    "title": "Assassination of Julius Caesar",
+    "date": {
+      "year": -43,
+      "month": 3,
+      "day": 15,
+      "precision": "exact",
+      "approximate": false
+    },
+    "summary": "Julius Caesar was assassinated by a group of senators on the Ides of March, 44 BCE.",
+    "narrative": "On March 15, 44 BCE (the Ides of March in the Roman calendar), Julius Caesar was assassinated in the Theatre of Pompey during a meeting of the Senate. He was stabbed 23 times by a group of conspirators who called themselves the Liberatores, led by Gaius Cassius Longinus and Marcus Junius Brutus.\n\nThe conspirators claimed they were acting to save the Republic from Caesar's monarchical ambitions. Caesar had been named dictator perpetuo (dictator in perpetuity), and many senators feared he intended to make himself king—a title deeply offensive to Roman republican values.\n\nIronically, rather than saving the Republic, Caesar's assassination plunged Rome into another civil war and ultimately led to the establishment of the Empire under his adopted heir, Octavian (later Augustus). The assassination thus marked a critical turning point in the transformation from Republic to Empire.",
+    "categoryId": "politics",
+    "tags": ["assassination", "imperial-succession"],
+    "people": [{ "personId": "julius-caesar", "role": "victim" }],
+    "places": [{ "placeId": "rome", "context": "murder site" }],
+    "images": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Death_of_Caesar_by_Vincenzo_Camuccini.jpg/1024px-Death_of_Caesar_by_Vincenzo_Camuccini.jpg",
+        "caption": "The Death of Caesar by Vincenzo Camuccini (1804-1805)",
+        "attribution": "Vincenzo Camuccini",
+        "license": "Public Domain",
+        "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Death_of_Caesar_by_Vincenzo_Camuccini.jpg"
+      }
+    ],
+    "sources": [
+      {
+        "id": "plutarch-caesar",
+        "type": "ancient-primary",
+        "author": "Plutarch",
+        "title": "Parallel Lives - Life of Caesar",
+        "year": 100,
+        "verified": false,
+        "notes": "Written about 150 years after the event"
+      }
+    ],
+    "relatedEventIds": ["crossing-the-rubicon", "reign-augustus"]
+  },
+  {
+    "id": "reign-augustus",
+    "type": "reign",
+    "title": "Reign of Augustus",
+    "date": {
+      "year": -26,
+      "precision": "year",
+      "approximate": false
+    },
+    "endDate": {
+      "year": 14,
+      "precision": "year",
+      "approximate": false
+    },
+    "summary": "The reign of Augustus, the first Roman Emperor, who transformed Rome from a Republic into an Empire.",
+    "narrative": "Augustus (born Gaius Octavius, later Gaius Julius Caesar Octavianus) became the first Roman Emperor in 27 BCE, marking the end of the Roman Republic and the beginning of the Principate, an era of relative peace and stability known as the Pax Romana.\n\nAfter defeating Mark Antony and Cleopatra at the Battle of Actium in 31 BCE, Octavian was left as the sole ruler of Rome. Rather than declaring himself dictator or king (titles that had led to his adoptive father Julius Caesar's assassination), he carefully maintained the façade of republican government while concentrating real power in his own hands. The Senate granted him the honorific title \"Augustus\" (meaning \"the revered one\") in 27 BCE.\n\nAugustus's 40-year reign saw massive administrative reforms, territorial expansion, extensive building projects in Rome, and the flourishing of Roman literature and arts. His propaganda machine was highly effective, and he established many of the governmental structures that would last throughout the imperial period. Upon his death in 14 CE, the succession passed peacefully to his stepson Tiberius, establishing the principle of imperial succession.",
+    "categoryId": "emperors",
+    "tags": ["imperial-succession"],
+    "people": [{ "personId": "augustus", "role": "emperor" }],
+    "places": [{ "placeId": "rome", "context": "capital" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "res-gestae",
+        "type": "ancient-primary",
+        "author": "Augustus",
+        "title": "Res Gestae Divi Augusti (The Deeds of the Divine Augustus)",
+        "year": 14,
+        "verified": false,
+        "notes": "Augustus's own account of his achievements, propagandistic but primary source"
+      }
+    ],
+    "relatedEventIds": ["assassination-of-caesar"]
+  },
+  {
+    "id": "eruption-vesuvius",
+    "type": "point",
+    "title": "Eruption of Mount Vesuvius",
+    "date": {
+      "year": 79,
+      "month": 8,
+      "day": 24,
+      "precision": "exact",
+      "approximate": false
+    },
+    "summary": "The catastrophic eruption of Mount Vesuvius that buried Pompeii and Herculaneum.",
+    "narrative": "On August 24, 79 CE, Mount Vesuvius erupted in one of the most famous volcanic disasters in history, burying the Roman cities of Pompeii and Herculaneum under meters of ash and pumice. The eruption killed thousands of people, including the famous naturalist Pliny the Elder, who died while attempting a rescue mission.\n\nThe eruption began around midday and continued through the night and into the next day. The initial phase sent a column of ash and pumice over 30 kilometers into the atmosphere. This was followed by devastating pyroclastic surges—fast-moving clouds of superheated gas and volcanic matter—that swept down the mountain's slopes.\n\nWhile tragic, the eruption inadvertently preserved these cities in remarkable detail, providing modern archaeologists with an unprecedented snapshot of daily life in the Roman Empire. The buried cities were rediscovered in the 18th century and have since yielded invaluable information about Roman architecture, art, diet, social structure, and everyday life.",
+    "categoryId": "culture-religion",
+    "tags": ["natural-disaster"],
+    "people": [],
+    "places": [{ "placeId": "pompeii", "context": "destroyed city" }],
+    "images": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Pompeii_the_last_day_1.jpg/1024px-Pompeii_the_last_day_1.jpg",
+        "caption": "The Last Day of Pompeii by Karl Bryullov (1833)",
+        "attribution": "Karl Bryullov",
+        "license": "Public Domain",
+        "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Pompeii_the_last_day_1.jpg"
+      }
+    ],
+    "sources": [
+      {
+        "id": "pliny-letters",
+        "type": "ancient-primary",
+        "author": "Pliny the Younger",
+        "title": "Letters 6.16 and 6.20",
+        "publication": "To Tacitus",
+        "year": 106,
+        "verified": false,
+        "notes": "Eyewitness account of the eruption, written about 25 years later"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "reign-trajan",
+    "type": "reign",
+    "title": "Reign of Trajan",
+    "date": {
+      "year": 98,
+      "precision": "year",
+      "approximate": false
+    },
+    "endDate": {
+      "year": 117,
+      "precision": "year",
+      "approximate": false
+    },
+    "summary": "The reign of Trajan, under whom the Roman Empire reached its greatest territorial extent.",
+    "narrative": "Trajan (Marcus Ulpius Traianus) ruled as Roman Emperor from 98 to 117 CE and is remembered as one of the \"Five Good Emperors\" of the Antonine dynasty. Under his rule, the Roman Empire reached its greatest geographic extent.\n\nTrajan was particularly known for his military conquests. His Dacian Wars (101-102 CE and 105-106 CE) resulted in the annexation of Dacia (roughly modern Romania) as a Roman province, bringing vast gold mines under Roman control. His eastern campaigns against the Parthian Empire (113-117 CE) briefly brought Armenia, Mesopotamia, and Assyria under Roman control, though these conquests would not outlast his reign.\n\nBeyond military achievements, Trajan was a prolific builder. His forum in Rome, including Trajan's Column with its spiral relief depicting the Dacian Wars, stands as one of ancient Rome's architectural masterpieces. He also initiated significant public works projects throughout the empire, including roads, bridges, and aqueducts. The Roman Senate bestowed upon him the title \"Optimus Princeps\" (the best ruler), and later emperors would be wished to be \"luckier than Augustus and better than Trajan.\"",
+    "categoryId": "emperors",
+    "tags": ["territorial-expansion", "imperial-succession"],
+    "people": [{ "personId": "trajan", "role": "emperor" }],
+    "places": [{ "placeId": "rome", "context": "capital" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "dio-cassius-trajan",
+        "type": "ancient-primary",
+        "author": "Cassius Dio",
+        "title": "Roman History",
+        "publication": "Books 68",
+        "year": 220,
+        "verified": false,
+        "notes": "Written about 100 years after Trajan's reign; the section on Trajan survives only in fragments"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "edict-of-caracalla",
+    "type": "point",
+    "title": "Edict of Caracalla (Constitutio Antoniniana)",
+    "date": {
+      "year": 212,
+      "precision": "year",
+      "approximate": false
+    },
+    "summary": "Emperor Caracalla grants Roman citizenship to all free inhabitants of the Roman Empire.",
+    "narrative": "In 212 CE, Emperor Caracalla issued the Constitutio Antoniniana (Antonine Constitution), also known as the Edict of Caracalla. This revolutionary legislation granted Roman citizenship to virtually all free inhabitants of the Roman Empire who did not already possess it.\n\nBefore this edict, Roman citizenship was a privileged status that had been gradually extended over centuries but was still not universal. The edict represented a dramatic expansion of citizenship rights, though it did not extend to slaves or certain categories of freedmen.\n\nHistorians debate Caracalla's motives. Ancient sources, particularly Cassius Dio, suggest the primary motivation was fiscal—to increase tax revenue, as citizens paid certain taxes that non-citizens did not. However, the edict also reflected the long-term trend toward cultural and legal integration within the empire. Regardless of motivation, the edict fundamentally transformed the legal landscape of the Roman world and represented the culmination of Rome's evolution from a city-state to a universal empire.",
+    "categoryId": "politics",
+    "tags": ["legislation"],
+    "people": [{ "personId": "caracalla", "role": "emperor" }],
+    "places": [{ "placeId": "rome", "context": "seat of power" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "dio-caracalla",
+        "type": "ancient-primary",
+        "author": "Cassius Dio",
+        "title": "Roman History",
+        "publication": "Book 77",
+        "year": 220,
+        "verified": false,
+        "notes": "Cassius Dio provides a critical contemporary account"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "crisis-third-century",
+    "type": "era-band",
+    "title": "Crisis of the Third Century",
+    "date": {
+      "year": 235,
+      "precision": "year",
+      "approximate": false
+    },
+    "endDate": {
+      "year": 284,
+      "precision": "year",
+      "approximate": false
+    },
+    "summary": "A period of near-collapse for the Roman Empire, characterized by civil war, plague, and invasions.",
+    "narrative": "The Crisis of the Third Century (235-284 CE) was a period when the Roman Empire nearly collapsed under the combined pressures of civil war, foreign invasions, plague, and economic crisis. The crisis began with the assassination of Emperor Alexander Severus in 235 CE and ended with the accession of Diocletian in 284 CE.\n\nDuring these 50 years, the empire saw at least 26 claimants to the imperial throne, most of whom died violent deaths. The rapid turnover of emperors, combined with continuous civil wars, severely weakened the empire's frontiers. Germanic tribes invaded from the north, while the new Sassanid Persian Empire pressured the eastern borders. The empire even briefly split into three competing states: the Gallic Empire in the west, the Palmyrene Empire in the east, and the central Roman Empire.\n\nThe crisis was also characterized by devastating plague epidemics (possibly smallpox), massive economic disruption including rampant inflation and debasement of coinage, and the breakdown of long-distance trade networks. The traditional political and military structures of the Principate proved inadequate to handle these challenges. The eventual stabilization under Diocletian and Constantine would require radical restructuring of the empire's government, military, and economy, ushering in the period known as the Dominate.",
+    "categoryId": "politics",
+    "tags": ["imperial-succession"],
+    "people": [],
+    "places": [{ "placeId": "rome", "context": "imperial center" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "southern-crisis",
+        "type": "modern-secondary",
+        "author": "Pat Southern",
+        "title": "The Roman Empire from Severus to Constantine",
+        "publication": "Routledge",
+        "year": 2001,
+        "verified": false,
+        "notes": "Modern scholarly synthesis - verify before citing"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "edict-of-milan",
+    "type": "point",
+    "title": "Edict of Milan",
+    "date": {
+      "year": 313,
+      "month": 2,
+      "precision": "month",
+      "approximate": false
+    },
+    "summary": "Constantine and Licinius proclaim religious tolerance, effectively ending persecution of Christians.",
+    "narrative": "In February 313 CE, the Roman emperors Constantine I and Licinius issued the Edict of Milan, a proclamation that granted religious tolerance throughout the Roman Empire and specifically ended the persecution of Christians. This marked a dramatic reversal of imperial policy and a watershed moment in both Roman and Christian history.\n\nThe edict went beyond mere tolerance; it ordered the restoration of previously confiscated Christian property and granted Christians the right to practice their religion openly. While the document itself has not survived, its content is known from references in the works of Lactantius and Eusebius.\n\nThe Edict of Milan was a product of political alliance—Constantine ruled the western empire and Licinius the east, and they agreed on this policy of religious tolerance. For Constantine, who claimed to have had a vision of the Christian cross before his victory at the Battle of Milvian Bridge the previous year, this represented the beginning of his increasing favor toward Christianity.\n\nThe edict's effects were far-reaching. Christianity rapidly transformed from a persecuted minority religion to the favored faith of the imperial administration. Within a few decades, it would become the dominant religion of the empire, fundamentally reshaping Roman culture, law, and society.",
+    "categoryId": "culture-religion",
+    "tags": ["religious-policy", "legislation"],
+    "people": [{ "personId": "constantine", "role": "emperor" }],
+    "places": [{ "placeId": "milan", "context": "proclamation site" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "eusebius-constantine",
+        "type": "ancient-primary",
+        "author": "Eusebius of Caesarea",
+        "title": "Life of Constantine",
+        "year": 339,
+        "verified": false,
+        "notes": "Hagiographic account by Constantine's contemporary and supporter"
+      }
+    ],
+    "relatedEventIds": []
+  },
+  {
+    "id": "fall-western-rome",
+    "type": "point",
+    "title": "Fall of the Western Roman Empire",
+    "date": {
+      "year": 476,
+      "month": 9,
+      "day": 4,
+      "precision": "exact",
+      "approximate": false,
+      "calendarNote": "traditional date"
+    },
+    "summary": "Romulus Augustulus, last Western Roman Emperor, is deposed by the Germanic chieftain Odoacer.",
+    "narrative": "On September 4, 476 CE, Romulus Augustulus, the last emperor of the Western Roman Empire, was deposed by Odoacer, a Germanic chieftain who had risen through the ranks of the Roman army. Odoacer then sent the imperial regalia to the Eastern Emperor Zeno in Constantinople, effectively marking the end of the Western Roman Empire.\n\nRomulus Augustulus (whose diminutive nickname means \"little Augustus\") had been installed as emperor by his father, the military commander Orestes, in October 475. He was never recognized by the Eastern Empire and controlled little territory beyond Italy. When Odoacer's forces demanded land in Italy and were refused, they revolted, killed Orestes, and deposed the teenage emperor.\n\nRather than claiming the imperial title for himself, Odoacer declared himself King of Italy and nominally acknowledged the authority of the Eastern Emperor, a shrewd political move that gave him legitimacy while avoiding direct confrontation with Constantinople. Romulus Augustulus was pensioned off to a villa in Campania and disappears from historical record.\n\nWhile 476 CE is traditionally marked as the \"fall of Rome,\" this is somewhat of a simplification. The transformation was gradual, and many Roman institutions, laws, and cultural practices continued under Germanic rule in the West. Moreover, the Eastern Roman Empire (later called Byzantine) would continue for another thousand years until 1453.",
+    "categoryId": "politics",
+    "tags": ["imperial-succession"],
+    "people": [{ "personId": "romulus-augustulus", "role": "emperor" }],
+    "places": [{ "placeId": "rome", "context": "former capital" }],
+    "images": [],
+    "sources": [
+      {
+        "id": "marcellinus-comes",
+        "type": "ancient-primary",
+        "author": "Marcellinus Comes",
+        "title": "Chronicle",
+        "year": 534,
+        "verified": false,
+        "notes": "Later chronicle, written about 60 years after the event"
+      }
+    ],
+    "relatedEventIds": ["fall-of-constantinople"]
+  },
+  {
+    "id": "fall-of-constantinople",
+    "type": "point",
+    "title": "Fall of Constantinople",
+    "date": {
+      "year": 1453,
+      "month": 5,
+      "day": 29,
+      "precision": "exact",
+      "approximate": false
+    },
+    "summary": "The Ottoman Empire conquers Constantinople, ending the Byzantine Empire and Roman continuity.",
+    "narrative": "On May 29, 1453, after a 53-day siege, the Ottoman Sultan Mehmed II successfully captured Constantinople, the capital of the Byzantine Empire. This event marked the final end of the Roman Empire, which had existed in continuous political form since Augustus established the Principate in 27 BCE—a span of nearly 1,500 years.\n\nThe siege featured the use of massive cannons designed by the Hungarian engineer Orban, capable of firing enormous stone balls that eventually breached the ancient Theodosian Walls. Despite heroic resistance led by the last Byzantine Emperor Constantine XI Palaiologos, who died fighting in the final assault, the city fell to the numerically superior Ottoman forces.\n\nThe fall of Constantinople sent shockwaves throughout Christian Europe. Many Greek scholars fled to Italy, bringing with them classical manuscripts and knowledge that would contribute to the Renaissance. The city was renamed Istanbul and became the capital of the Ottoman Empire.\n\nThe Byzantine Empire had preserved Roman law, Greek learning, and Christian culture throughout the Middle Ages. Its fall represents not just the end of a medieval state, but the final extinction of the Roman Empire that had shaped Western civilization for nearly two millennia. Many historians consider 1453 to mark the end of the Middle Ages and the beginning of the Early Modern Period.",
+    "categoryId": "military",
+    "tags": ["battle"],
+    "people": [{ "personId": "constantine-xi", "role": "emperor" }],
+    "places": [{ "placeId": "constantinople", "context": "besieged capital" }],
+    "images": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Zonaro_GatesofConst.jpg/1024px-Zonaro_GatesofConst.jpg",
+        "caption": "The Fall of Constantinople painted by Fausto Zonaro (1903)",
+        "attribution": "Fausto Zonaro",
+        "license": "Public Domain",
+        "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Zonaro_GatesofConst.jpg"
+      }
+    ],
+    "sources": [
+      {
+        "id": "doukas-fall",
+        "type": "ancient-primary",
+        "author": "Doukas",
+        "title": "Historia Byzantina",
+        "year": 1462,
+        "verified": false,
+        "notes": "Eyewitness account by Byzantine historian who survived the siege"
+      }
+    ],
+    "relatedEventIds": ["fall-western-rome"]
+  }
+]
