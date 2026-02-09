@@ -32,7 +32,15 @@ export default function EventCard({ event, isActive, onClick }: EventCardProps) 
     >
       <div className="event-card-color-bar" style={{ backgroundColor: lane?.color || '#ccc' }} />
       <div className="event-card-content">
-        <h3 className="event-card-title">{event.title}</h3>
+        <div className="event-card-header">
+          <h3 className="event-card-title">{event.title}</h3>
+          <span className="event-type-badge" title={event.type}>
+            {event.type === 'point' && '●'}
+            {event.type === 'range' && '▬'}
+            {event.type === 'reign' && '👑'}
+            {event.type === 'era-band' && '═'}
+          </span>
+        </div>
         <div className="event-card-date">{dateString}</div>
         <p className="event-card-summary">{event.summary}</p>
         {event.tags.length > 0 && (

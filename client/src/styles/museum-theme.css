@@ -75,9 +75,27 @@
   padding: 1rem;
 }
 
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
 .event-card-title {
   font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.event-type-badge {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
 
 .event-card-date {
@@ -128,13 +146,46 @@
 
 .event-detail-header {
   border-bottom: 3px solid var(--gold);
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .event-detail-header h2 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--bronze);
+}
+
+.event-detail-header button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f0e6d2;
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.event-detail-header button:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+.event-detail-clear-btn {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  font-size: 1.5rem !important;
+  border: 1px solid var(--gold) !important;
+  background: #f0e6d2 !important;
+  border-radius: 4px !important;
 }
 
 .event-detail-date {
@@ -150,12 +201,20 @@
 
 .event-detail-narrative {
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: 2;
   margin-bottom: 2rem;
+  background: #fafaf8;
+  padding: 1.5rem;
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
 }
 
 .event-detail-narrative p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-detail-narrative p:last-child {
+  margin-bottom: 0;
 }
 
 .event-detail-people,
@@ -178,6 +237,40 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+/* Related Events */
+.event-detail-related {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f5f0;
+  border-radius: 8px;
+  border-left: 4px solid var(--gold);
+}
+
+.related-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.related-event-item {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e0d5c7;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.related-event-item:hover {
+  border-color: var(--gold);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+  background: #fafaf8;
 }
 
 /* Image Gallery */

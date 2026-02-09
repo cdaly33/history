@@ -9,11 +9,29 @@ import SourcesList from './SourcesList';
 
 export default function EventDetail() {
   const { events, people, places, tags } = useDataStore();
-  const { selectedEventId } = useTimelineStore();
+  const { selectedEventId, clearSelection, setSelectedEventId } = useTimelineStore();
 
   const event = useMemo(() => {
     return events.find((e) => e.id === selectedEventId);
   }, [events, selectedEventId]);
+
+  // Find related events (same lane, people, or time period)
+  const relatedEvents = useMemo(() => {
+    if (!event) return [];
+    const related = events.filter((e) => {
+      if (e.id === event.id) return false;
+      // Same lane
+      if (e.categoryId === event.categoryId) return true;
+      // Shared people
+      if (event.people.some((p) => e.people.some((ep) => ep.personId === p.personId))) return true;
+      // Overlapping time periods
+      const eventEnd = event.endDate || event.date;
+      const eEnd = e.endDate || e.date;
+      if (event.date <= eEnd && eventEnd >= e.date) return true;
+      return false;
+    });
+    return related.slice(0, 5);
+  }, [event, events]);
 
   if (!event) {
     return null;
@@ -41,18 +59,29 @@ export default function EventDetail() {
   return (
     <div className="event-detail">
       <header className="event-detail-header">
-        <h2>{event.title}</h2>
-        <div className="event-detail-date">{dateString}</div>
-        {event.tags.length > 0 && (
-          <div className="event-detail-tags">
-            {eventTags.map((tag) => (
-              <span key={tag?.id} className="tag-chip">
-                {tag?.label}
-              </span>
-            ))}
-          </div>
-        )}
+        <div>
+          <h2>{event.title}</h2>
+          <div className="event-detail-date">{dateString}</div>
+        </div>
+        <button 
+          onClick={() => clearSelection()} 
+          className="event-detail-clear-btn"
+          title="Clear selection"
+          aria-label="Close event details"
+        >
+          ✕
+        </button>
       </header>
+
+      {event.tags.length > 0 && (
+        <div className="event-detail-tags">
+          {eventTags.map((tag) => (
+            <span key={tag?.id} className="tag-chip">
+              {tag?.label}
+            </span>
+          ))}
+        </div>
+      )}
 
       <section className="event-detail-narrative">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{event.narrative}</ReactMarkdown>
@@ -101,6 +130,29 @@ export default function EventDetail() {
         <section className="event-detail-sources">
           <h3>Sources & References</h3>
           <SourcesList sources={event.sources} />
+        </section>
+      )}
+
+      {relatedEvents.length > 0 && (
+        <section className="event-detail-related">
+          <h3>Related Events</h3>
+          <div className="related-events-list">
+            {relatedEvents.map((re) => (
+              <button
+                key={re.id}
+                className="related-event-item"
+                onClick={() => {
+                  setSelectedEventId(re.id);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                type="button"
+              >
+                <strong>{re.title}</strong>
+                <br/>
+                <small>{format(re.date)}</small>
+              </button>
+            ))}
+          </div>
         </section>
       )}
     </div>

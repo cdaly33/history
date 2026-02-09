@@ -21,7 +21,7 @@ export default function TimelineAxis({ scale, height, visibleDomain, zoomLevel }
     return 1;                     // Year ticks
   }, [visibleDomain]);
 
-  // Generate tick values
+  // Generate tick values with culling to prevent overlap
   const ticks = useMemo(() => {
     const [min, max] = visibleDomain;
     const tickValues: number[] = [];
@@ -34,8 +34,17 @@ export default function TimelineAxis({ scale, height, visibleDomain, zoomLevel }
       tickValues.push(year);
     }
 
+    // Cull overlapping labels based on available space
+    if (zoomLevel < 2) {
+      // At low zoom, space is tight; show fewer labels
+      return tickValues.filter(year => year % (tickInterval * 2) === 0 || tickInterval >= 100);
+    }
+    if (zoomLevel < 5) {
+      // Medium zoom
+      return tickValues.filter(year => year % tickInterval === 0);
+    }
     return tickValues;
-  }, [visibleDomain, tickInterval]);
+  }, [visibleDomain, tickInterval, zoomLevel]);
 
   return (
     <g className="timeline-axis">
@@ -65,10 +74,13 @@ export default function TimelineAxis({ scale, height, visibleDomain, zoomLevel }
           <g key={year} transform={`translate(${x}, 0)`}>
             <line y1={0} y2={10} stroke="#333" strokeWidth={1} />
             <text
-              y={25}
-              textAnchor="middle"
-              fontSize={12}
-              fill="#333"
+              y={15}
+              textAnchor="start"
+              dominantBaseline="middle"
+              fontSize={11}
+              fill="#654321"
+              transform="rotate(45)"
+              style={{ userSelect: 'none' }}
             >
               {label}
             </text>
