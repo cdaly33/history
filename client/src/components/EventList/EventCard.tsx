@@ -34,6 +34,7 @@ export default function EventCard({ event, isActive, onClick }: EventCardProps) 
       <div className="event-card-content">
         <div className="event-card-header">
           <h3 className="event-card-title">{event.title}</h3>
+          {isActive && <span className="event-selected-badge">Selected</span>}
           <span className="event-type-badge" title={event.type}>
             {event.type === 'point' && '●'}
             {event.type === 'range' && '▬'}

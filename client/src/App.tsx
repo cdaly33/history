@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDataStore } from './stores/dataStore';
 import TimelineViewport from './components/Timeline/TimelineViewport';
 import EventList from './components/EventList/EventList';
@@ -10,6 +10,7 @@ import { useKeyboardNav } from './hooks/useKeyboardNav';
 export default function App() {
   const { loaded, error, loadData } = useDataStore();
   const selectedEventId = useTimelineStore((state) => state.selectedEventId);
+  const [isListOpen, setIsListOpen] = useState(true);
   
   // Enable keyboard navigation
   useKeyboardNav();
@@ -44,7 +45,22 @@ export default function App() {
         </section>
 
         <section className="content-section">
-          <div className="event-list-container">
+          <div className="content-toolbar">
+            <button
+              type="button"
+              className="event-list-toggle"
+              onClick={() => setIsListOpen((open) => !open)}
+              aria-expanded={isListOpen}
+              aria-controls="event-list-panel"
+            >
+              {isListOpen ? 'Hide events' : 'Show events'}
+            </button>
+          </div>
+
+          <div
+            id="event-list-panel"
+            className={`event-list-container ${isListOpen ? 'is-open' : 'is-collapsed'}`}
+          >
             <EventList />
           </div>
           <div className="event-detail-container">
@@ -58,6 +74,13 @@ export default function App() {
                     <li>Select an event from the list on the left to highlight it</li>
                     <li>Use the zoom controls to navigate different time periods</li>
                     <li>Hover over events to see additional information</li>
+                  </ul>
+                  <p><strong>Keyboard shortcuts:</strong></p>
+                  <ul>
+                    <li>Arrow keys: move between events</li>
+                    <li>+ / -: zoom in and out</li>
+                    <li>/ : focus search</li>
+                    <li>Esc: clear selection</li>
                   </ul>
                   <p><strong>Timeline spans:</strong> 509 BCE to 1453 CE, from the Republic to the Fall of Constantinople</p>
                 </div>

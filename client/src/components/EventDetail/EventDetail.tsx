@@ -61,7 +61,10 @@ export default function EventDetail() {
       <header className="event-detail-header">
         <div>
           <h2>{event.title}</h2>
-          <div className="event-detail-date">{dateString}</div>
+          <div className="event-detail-meta">
+            <span className="event-selected-badge">Selected</span>
+            <div className="event-detail-date">{dateString}</div>
+          </div>
         </div>
         <button 
           onClick={() => clearSelection()} 

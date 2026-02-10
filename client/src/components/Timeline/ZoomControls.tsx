@@ -1,22 +1,37 @@
-import { useState } from 'react';
-import { parseYear } from '../../utils/historicalDate';
+import { useMemo, useState } from 'react';
+import { astronomicalToDisplay, parseYear } from '../../utils/historicalDate';
 
 interface ZoomControlsProps {
   onZoomIn: () => void;
   onZoomOut: () => void;
   onGoToYear: (year: number) => void;
+  onResetView: () => void;
+  onFitAll: () => void;
   currentZoomLevel: number;
+  minYear: number;
+  maxYear: number;
+  centerYear: number;
 }
 
 export default function ZoomControls({
   onZoomIn,
   onZoomOut,
   onGoToYear,
+  onResetView,
+  onFitAll,
   currentZoomLevel,
+  minYear,
+  maxYear,
+  centerYear,
 }: ZoomControlsProps) {
   const [yearInput, setYearInput] = useState('');
   const [eraToggle, setEraToggle] = useState<'CE' | 'BCE'>('CE');
   const [error, setError] = useState<string | null>(null);
+
+  const centerYearLabel = useMemo(() => {
+    const { value, era } = astronomicalToDisplay(Math.round(centerYear));
+    return `${value} ${era}`;
+  }, [centerYear]);
 
   const handleGoToYear = () => {
     setError(null);
@@ -50,6 +65,8 @@ export default function ZoomControls({
         <button onClick={onZoomOut} aria-label="Zoom out" title="Zoom out (–)">−</button>
         <span className="zoom-level" title="Current zoom level">Zoom: {currentZoomLevel.toFixed(1)}x</span>
         <button onClick={onZoomIn} aria-label="Zoom in" title="Zoom in (+)">+</button>
+        <button onClick={onResetView} className="zoom-secondary" type="button">Reset view</button>
+        <button onClick={onFitAll} className="zoom-secondary" type="button">Fit all eras</button>
       </div>
 
       <div className="year-input-group">
@@ -88,6 +105,22 @@ export default function ZoomControls({
             {error}
           </div>
         )}
+      </div>
+
+      <div className="timeline-scrubber">
+        <div className="scrubber-header">
+          <span>Scrub timeline</span>
+          <span className="scrubber-year">Center: {centerYearLabel}</span>
+        </div>
+        <input
+          type="range"
+          min={minYear}
+          max={maxYear}
+          value={Math.round(centerYear)}
+          onChange={(e) => onGoToYear(Number(e.target.value))}
+          className="scrubber-input"
+          aria-label="Timeline scrubber"
+        />
       </div>
     </div>
   );

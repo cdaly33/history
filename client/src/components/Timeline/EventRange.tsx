@@ -1,5 +1,6 @@
 import type { TimelineEvent } from '../../../../shared/types';
 import { useTimelineStore } from '../../stores/timelineStore';
+import { format, formatRange } from '../../utils/historicalDate';
 
 interface EventRangeProps {
   event: TimelineEvent;
@@ -13,6 +14,10 @@ interface EventRangeProps {
 export default function EventRange({ event, x, width, y, height, color }: EventRangeProps) {
   const { selectedEventId, setSelectedEventId } = useTimelineStore();
   const isSelected = selectedEventId === event.id;
+  const dateString = event.endDate
+    ? formatRange({ start: event.date, end: event.endDate })
+    : format(event.date);
+  const tooltipText = `${event.title} - ${dateString}`;
 
   const handleClick = () => {
     setSelectedEventId(event.id);
@@ -28,25 +33,33 @@ export default function EventRange({ event, x, width, y, height, color }: EventR
         fill={color}
         stroke={isSelected ? '#000' : '#fff'}
         strokeWidth={isSelected ? 2 : 1}
-        className="event-marker"
+        className={`event-marker ${isSelected ? 'is-selected' : ''}`}
         onClick={handleClick}
         style={{ cursor: 'pointer' }}
         role="button"
-        aria-label={event.title}
+        aria-label={tooltipText}
+        aria-pressed={isSelected}
         tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleClick();
+          }
+        }}
       >
-        <title>{event.title}</title>
+        <title>{tooltipText}</title>
       </circle>
     );
   }
 
   return (
     <g
-      className="event-range"
+      className={`event-range ${isSelected ? 'is-selected' : ''}`}
       onClick={handleClick}
       style={{ cursor: 'pointer' }}
       role="button"
-      aria-label={event.title}
+      aria-label={tooltipText}
+      aria-pressed={isSelected}
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -78,7 +91,7 @@ export default function EventRange({ event, x, width, y, height, color }: EventR
           {event.title}
         </text>
       )}
-      <title>{event.title}</title>
+      <title>{tooltipText}</title>
     </g>
   );
 }

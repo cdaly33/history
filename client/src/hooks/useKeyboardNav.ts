@@ -26,6 +26,15 @@ export function useKeyboardNav() {
         case 'Escape':
           clearSelection();
           break;
+        case '/': {
+          const searchInput = document.getElementById('event-search-input') as HTMLInputElement | null;
+          if (searchInput) {
+            e.preventDefault();
+            searchInput.focus();
+            searchInput.select();
+          }
+          break;
+        }
         case 'ArrowDown':
         case 'ArrowRight':
           e.preventDefault();

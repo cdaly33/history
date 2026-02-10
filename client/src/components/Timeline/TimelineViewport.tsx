@@ -13,6 +13,8 @@ import '../../styles/timeline.css';
 const TIMELINE_HEIGHT = 600;
 const AXIS_HEIGHT = 60;
 const LANE_HEIGHT = 80;
+const MIN_YEAR = -508;
+const MAX_YEAR = 1453;
 
 export default function TimelineViewport() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -42,31 +44,16 @@ export default function TimelineViewport() {
 
   // Create scale: astronomical year -> pixel x-coordinate
   const scale = useMemo(() => {
-    // Timeline spans from 509 BCE (-508) to 1453 CE (1453)
-    const minYear = -508;
-    const maxYear = 1453;
-    const totalYears = maxYear - minYear;
-
     // Base scale before zoom
-    const baseScale = scaleLinear()
-      .domain([minYear, maxYear])
-      .range([50, viewportWidth - 50]); // Margin on sides
-
-    // Apply zoom transform
-    const scaledDomain = [
-      (minYear - zoomTransform.x / zoomTransform.k),
-      (maxYear - zoomTransform.x / zoomTransform.k),
-    ];
-
     return scaleLinear()
-      .domain([minYear, maxYear])
+      .domain([MIN_YEAR, MAX_YEAR])
       .range([50, viewportWidth - 50]);
   }, [viewportWidth, zoomTransform]);
 
   // Calculate visible domain for viewport culling
   const visibleDomain = useMemo((): [number, number] => {
     const inverted = scale.domain();
-    return [inverted[0] || -508, inverted[1] || 1453];
+    return [inverted[0] || MIN_YEAR, inverted[1] || MAX_YEAR];
   }, [scale]);
 
   // Group events by lane
@@ -84,8 +71,52 @@ export default function TimelineViewport() {
   const handleGoToYear = (year: number) => {
     const xPos = scale(year);
     const centerOffset = viewportWidth / 2;
-    zoomTo(centerOffset - xPos, 0, zoomTransform.k);
+    zoomTo(centerOffset - xPos * zoomTransform.k, 0, zoomTransform.k);
   };
+
+  const handleRecenter = () => {
+    const centerYear = (MIN_YEAR + MAX_YEAR) / 2;
+    const centerOffset = viewportWidth / 2;
+    const xPos = scale(centerYear);
+    zoomTo(centerOffset - xPos * zoomTransform.k, 0, zoomTransform.k);
+  };
+
+  const handleFitAll = () => {
+    zoomTo(0, 0, 1);
+  };
+
+  const currentCenterYear = useMemo(() => {
+    const centerOffset = viewportWidth / 2;
+    const worldX = (centerOffset - zoomTransform.x) / zoomTransform.k;
+    const year = scale.invert(worldX);
+    return Math.max(MIN_YEAR, Math.min(MAX_YEAR, year));
+  }, [scale, viewportWidth, zoomTransform]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLSelectElement ||
+        target instanceof HTMLTextAreaElement
+      ) {
+        return;
+      }
+
+      if (e.key === '+' || e.key === '=') {
+        e.preventDefault();
+        zoomIn();
+      }
+
+      if (e.key === '-' || e.key === '_') {
+        e.preventDefault();
+        zoomOut();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [zoomIn, zoomOut]);
 
   const totalHeight = AXIS_HEIGHT + lanes.length * LANE_HEIGHT + 100;
 
@@ -95,8 +126,36 @@ export default function TimelineViewport() {
         onZoomIn={zoomIn}
         onZoomOut={zoomOut}
         onGoToYear={handleGoToYear}
+        onResetView={handleRecenter}
+        onFitAll={handleFitAll}
         currentZoomLevel={zoomTransform.k}
+        minYear={MIN_YEAR}
+        maxYear={MAX_YEAR}
+        centerYear={currentCenterYear}
       />
+
+      <div className="timeline-legend">
+        <div className="legend-section">
+          <span className="legend-title">Lanes</span>
+          <div className="legend-items">
+            {lanes.map((lane) => (
+              <div key={lane.id} className="legend-item">
+                <span className="legend-swatch" style={{ backgroundColor: lane.color }} />
+                <span>{lane.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="legend-section">
+          <span className="legend-title">Event types</span>
+          <div className="legend-items">
+            <div className="legend-item"><span className="legend-symbol">●</span>Point</div>
+            <div className="legend-item"><span className="legend-symbol">▬</span>Range</div>
+            <div className="legend-item"><span className="legend-symbol">👑</span>Reign</div>
+            <div className="legend-item"><span className="legend-symbol">═</span>Era band</div>
+          </div>
+        </div>
+      </div>
 
       <svg
         ref={svgRef}
